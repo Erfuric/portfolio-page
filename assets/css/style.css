@@ -2,6 +2,7 @@
 :root {
     --BackgroundPrimary: #36454F;
     --BackgroundSecondary: #212121;
+    --outlineDark: #000000;
     --MenuMain: #808080;
     --MenuHover: #36454F;
     --TextPrimary: #B2BEB5;
@@ -9,25 +10,44 @@
     --HeaderPrimary: 200%;
     --HeaderSecondary: 250%;
     --HeaderMargin: 2% 0;
-    background-color: var(--BackgroundPrimary);
 
+}
 
+::selection{
+    background-color: #8ac4ff;
+    color: var(--MenuHover)
+}
+
+/* setting font size so 1rem is 10px for easier calculation*/
+html {
+    font-size: 62.5%;
 }
 
 body {
-    display:flex;
-    flex-direction: column;
-    line-height: 1.3;
+    font-family: Arial, sans-serif, comic;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--TextPrimary);
+    background-color: var(--BackgroundPrimary);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.625rem;
+    font-weight:  700;
+    line-height: 1.1
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
-    background-color: var(--BackgroundSecondary);
-    color: var(--TextPrimary);
-    
+    width: 96%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    text-align: center;
 }
 
 h1 {
@@ -63,12 +83,67 @@ nav a:hover {
     color: var(--MenuHover);
 }
 
+main {
+    width: 96%;
+    margin: 2rem auto;
+  }
+  
+  footer {
+    margin: 1.5rem;
+    text-align: center;
+  }
+
+/* main flexbox grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+/*  class for adding justify-center */
+.justify-center {
+    justify-content: center;
+}
+
+.project-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+.project-card {
+    display:  flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    color: var(--BackgroundSecondary);
+    outline: 2px solid var(--outlineDark);
+    outline-offset:-2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.project-card .project-header {
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--outer-space);
+    color: var(--heliotrope);
+    border: 2px solid var(--gin);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
 .avatar {
     max-width: 100px;
     width: 100%;
     max-height: 100px;
     height: 100%;
-    border: 2px solid #000000;
+    outline: 2px solid var(--outlineDark);
     
 }
 
@@ -91,14 +166,19 @@ nav a:hover {
 }
 
 
-/* Resolution settings for mobile screens */
+/* Resolution settings for mobile screens  */
 
 @media screen and (max-width: 992px) {
     header {
-      background: #772014;
-    }
-  }
+        width: 75%;
+      }
   
+    .card-column {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+      }
+    }
+
   @media screen and (max-width: 768px) {
     nav {
       background-color: #bb8588;
