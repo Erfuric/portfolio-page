@@ -1,0 +1,97 @@
+/* Root variables */
+:root {
+    --BackgroundPrimary: #36454F;
+    --BackgroundSecondary: #212121;
+    --MenuMain: #808080;
+    --MenuHover: #36454F;
+    --TextPrimary: #B2BEB5;
+    --TextSecondary: #AAAAAA;
+    --HeaderPrimary: 200%;
+    --HeaderSecondary: 250%;
+    --HeaderMargin: 2% 0;
+    background-color: var(--BackgroundPrimary);
+
+
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: var(--BackgroundSecondary);
+    color: var(--TextPrimary);
+    
+}
+
+h1 {
+    font-size:  var(--HeaderPrimary);
+    color: var(--TextPrimary);
+}
+
+h2 {
+    margin: var(--HeaderMargin);
+    font-size: var(--HeaderSecondary);
+    color: var(--TextPrimary);
+}
+
+h3 {
+    color: var(--TextSecondary);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+}
+
+nav a {
+    background-color: unset;
+    color: var(--MenuMain);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--MenuHover);
+}
+
+.photo {
+    padding: 20px 10px;
+    border: 2px solid var(--MenuMain);
+}
+
+.contact-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    color: var(--TextPrimary);
+}
+
+/* Resolution settings for mobile screens */
+
+@media screen and (max-width: 992px) {
+    header {
+      background: #772014;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    nav {
+      background-color: #bb8588;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .sample-img {
+      background-color: #8ac4ff;
+    }
+  }
