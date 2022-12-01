@@ -102,10 +102,10 @@ main {
     margin-right: -1.5rem;
 }
 
-/*  class for adding justify-center
+/*  class for adding justify-center */
 .justify-center {
     justify-content: center;
-} */
+}
 
 .project-column {
     flex: 1 0 100%;
@@ -136,7 +136,13 @@ main {
     transition: all 0.5s ease-in-out;
 }
 
-
+.projectImage {
+    max-width: 600px;
+    width: 60%;
+    max-height: 600px;
+    height: 100%;
+    outline: 2px solid var(--outlineDark); 
+}
 
 .avatar {
     max-width: 100px;
