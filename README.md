@@ -4,6 +4,8 @@ Portfolio page for bootcamp
 
 Information copied from assignment info
 
+Placeholder text and information on website currently as this will be updated once projects are completed.
+
 ---
 
 # 02 Advanced CSS: Portfolio
