@@ -65,11 +65,11 @@ h3 {
     color: var(--TextSecondary);
 }
 
-
 nav ul {
     display: flex;
     justify-content: space-between;
     min-width: 300px;
+
 }
 
 nav a {
@@ -102,10 +102,10 @@ main {
     margin-right: -1.5rem;
 }
 
-/*  class for adding justify-center */
+/*  class for adding justify-center
 .justify-center {
     justify-content: center;
-}
+} */
 
 .project-column {
     flex: 1 0 100%;
@@ -155,16 +155,16 @@ main {
     padding: 10px;
 }
 
-.contact {
-    flex-direction: column;
+/*.contact { 
+    flex-direction: row;
     line-height: 1.3;
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1%;
+    padding: 2%;
     color: var(--TextPrimary);
 }
-
+*/
 
 /* Resolution settings for mobile screens  */
 
